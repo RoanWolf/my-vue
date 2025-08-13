@@ -53,6 +53,7 @@ section.settings {
 .box-container {
   padding: 50px;
   border: 1px solid #8d81f3;
+  overflow: hidden;
 }
 .box {
   width: 150px;

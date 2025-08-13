@@ -13,25 +13,51 @@
       <main>
         <section class="settings">
           <div class="settings-container">
-            <label>perspective: X px;</label>
-            <input title="perspective" type="range" min="0" max="999" />
+            <label>perspective: {{size}} px;</label>
+            <input
+              title="perspective"
+              type="range"
+              min="0"
+              max="999"
+              v-model="size"
+            />
 
-            <label>rotateX: X deg; </label>
-            <input title="rotateX" type="range" min="-180" max="180" />
+            <label>rotateX: {{x}} deg; </label>
+            <input
+              title="rotateX"
+              type="range"
+              min="-180"
+              max="180"
+              v-model="x"
+            />
 
-            <label>rotateY: X deg; </label>
-            <input title="rotateY" type="range" min="-180" max="180" />
+            <label>rotateY: {{y}} deg; </label>
+            <input
+              title="rotateY"
+              type="range"
+              min="-180"
+              max="180"
+              v-model="y"
+            />
 
-            <label>rotateZ: X deg; </label>
-            <input title="rotateZ" type="range" min="-180" max="180" />
+            <label>rotateZ: {{z}} deg; </label>
+            <input
+              title="rotateZ"
+              type="range"
+              min="-180"
+              max="180"
+              v-model="z"
+            />
 
-            <button type="button">Reset</button>
+            <button type="button" @click="reset" >
+              Reset
+            </button>
           </div>
         </section>
         <section class="output">
-          <div class="box-container">
+          <div class="box-container" x>
             <!-- Set style -->
-            <div class="box"></div>
+            <div class="box" :style="transformStyle"></div>
           </div>
         </section>
       </main>
