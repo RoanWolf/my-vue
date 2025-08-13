@@ -1,0 +1,13 @@
+* {
+  margin: 0 auto;
+  text-align: center;
+}
+
+li {
+  list-style: none;
+}
+
+.deleted{
+  text-decoration: line-through;
+  
+}
