@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Vue Directives</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+  </head>
+  <body>
+    <div id="app">
+      <h1 :class="textColor">Demo</h1>
+
+      <select id="color-select" title="Change text color" v-model="textColor">
+        <option value="red-text">Red</option>
+        <option value="blue-text">Blue</option>
+      </select>
+
+      <button type="button" :disabled="isDisabled" @click="click1">
+        Click To Disable Me
+      </button>
+      <button type="button" @click="click2">Click To Enable Above</button>
+    </div>
+  </body>
+
+  <script src="./main.js"></script>
+</html>

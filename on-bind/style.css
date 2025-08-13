@@ -1,0 +1,16 @@
+.red-text {
+  color: red;
+}
+
+.blue-text {
+  color: blue;
+}
+
+#app {
+  text-align: center;
+}
+
+button {
+  display: block;
+  margin: 10px auto;
+}
