@@ -11,18 +11,14 @@
       :size="size"
       @update-size="size = Number($event)"
     />
-    <section class="output">
-      <div class="box-container" x>
-        <!-- Set style -->
-        <div class="box" :style="transformStyle"></div>
-      </div>
-    </section>
+    <OutputGraph :x="x" :y="y" :z="z" :size="size" />
+      
   </main>
 </template>
 
 <script>
 import Settings from "./components/Settings.vue";
-
+import OutputGraph from "./components/OutputGraph.vue";
 /*
   1. Sync input value with vue data and show it on the label(v-model 2-ways binding)
   2. Implement reset(v-on and methods)
@@ -34,7 +30,7 @@ import Settings from "./components/Settings.vue";
 // }
 
 const app = {
-  components: { Settings },
+  components: { Settings, OutputGraph },
   data() {
     return {
       x: 0,
@@ -45,13 +41,7 @@ const app = {
   },
   watch: {},
   methods: {},
-  computed: {
-    transformStyle() {
-      return {
-        transform: `perspective(${this.size}px)rotateX(${this.x}deg)rotateY(${this.y}deg)rotateZ(${this.z}deg)`,
-      };
-    },
-  },
+  
 };
 
 export default app;
