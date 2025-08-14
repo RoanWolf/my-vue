@@ -12,7 +12,6 @@
       @update-size="size = Number($event)"
     />
     <OutputGraph :x="x" :y="y" :z="z" :size="size" />
-      
   </main>
 </template>
 
@@ -41,7 +40,6 @@ const app = {
   },
   watch: {},
   methods: {},
-  
 };
 
 export default app;
